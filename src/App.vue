@@ -1,11 +1,14 @@
 <template>
-  <div class='c'>
+  <div class='app'>
     <router-view/>
   </div>
 </template>
 
 <style>
- .c {
+ .app {
    height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
  }
 </style>
