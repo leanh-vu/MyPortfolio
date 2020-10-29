@@ -1,14 +1,9 @@
 <template>
-  <div class='app'>
-    <router-view/>
-  </div>
+  <router-view />
 </template>
 
-<style>
- .app {
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
- }
-</style>
+<script>
+  export default {
+    name: 'App',
+  }
+</script>
