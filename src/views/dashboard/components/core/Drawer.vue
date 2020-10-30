@@ -6,7 +6,7 @@
     :expand-on-hover="expandOnHover"
     :right="$vuetify.rtl"
     :src="barImage"
-    mobile-break-point="960"
+    mobile-breakpoint="960"
     app
     width="260"
     v-bind="$attrs"
@@ -99,22 +99,22 @@
         {
           title: 'Skill',
           icon: 'mdi-clipboard-outline',
-          to: '/keyskills',
+          to: '/Skills',
         },
         {
           title: 'workEx',
           icon: 'mdi-format-font',
-          to: '/components/typography',
+          to: '/Workexperience',
         },
         {
           title: 'pProject',
           icon: 'mdi-chart-bubble',
-          to: '/components/icons',
+          to: '/PersonalProjects',
         },
         {
           title: 'education',
           icon: 'mdi-chart-bubble',
-          to: '/components/icons',
+          to: '/Education',
         },
       ],
     }),

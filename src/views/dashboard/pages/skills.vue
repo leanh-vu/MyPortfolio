@@ -18,6 +18,7 @@
       color="purple"
       medium
       half-increments
+      readonly
       :value="skill.rating"
     ></v-rating>
         </div>

@@ -22,28 +22,28 @@ export default new Vuex.Store({
     keySkills: [
       {
         skillName: 'Javascript',
-        description: 'i can use js',
+        description: 'JS',
         rating: 3,
       },
       {
         skillName: 'HTML',
         description: 'HTML',
-        rating: 3,
+        rating: 4,
       },
       {
         skillName: 'CSS',
         description: 'CSS - Bootstrap - SCSS',
-        rating: 3,
+        rating: 4,
       },
       {
         skillName: 'Vue.js',
         description: 'Vue.js - Vuex - Vue Router - Nuxt.js',
-        rating: 3,
+        rating: 3.2,
       },
       {
         skillName: 'ReactJS',
         description: 'ReactJS',
-        rating: 3,
+        rating: 2.2,
       },
       {
         skillName: 'Python',
@@ -58,7 +58,7 @@ export default new Vuex.Store({
       {
         skillName: 'Scrum',
         description: 'Scrum, Agile',
-        rating: 3,
+        rating: 4,
       },
     ],
     workExperience: [
@@ -75,15 +75,6 @@ export default new Vuex.Store({
 
         ],
         projects: [
-          {
-            projectName: '',
-            time: '',
-            teamSize: '',
-            role: '',
-            responsibility: '',
-            technology: [
-            ],
-          },
         ],
         technicalSkillSet: [
           'Vue.js',
@@ -95,6 +86,8 @@ export default new Vuex.Store({
           'React',
           'HTML',
           'CSS - Bootstrap - SCSS',
+          'English',
+          'Scrum',
         ],
       },
       {
@@ -115,7 +108,11 @@ export default new Vuex.Store({
             time: '',
             teamSize: '5',
             role: 'Frontend Web Developer',
-            responsibility: '',
+            responsibility: [
+              '1',
+              '2',
+              '3',
+            ],
             technology: [
               'Javascript',
               'Vuejs',
@@ -123,6 +120,7 @@ export default new Vuex.Store({
               'HTML',
               'CSS',
               'Bootstrap4',
+              'English',
             ],
           },
         ],
@@ -146,6 +144,10 @@ export default new Vuex.Store({
         achivement: [
         ],
         projects: [
+        ],
+        technicalSkillSet: [
+          'Python',
+          'English',
         ],
       },
     ],
