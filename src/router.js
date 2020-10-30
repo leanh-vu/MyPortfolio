@@ -29,9 +29,9 @@ export default new Router({
         },
         // Tables
         {
-          name: 'Regular Tables',
-          path: 'tables/regular-tables',
-          component: () => import('@/views/dashboard/tables/RegularTables'),
+          name: 'Key Skills',
+          path: 'keyskills',
+          component: () => import('@/views/dashboard/pages/skills'),
         },
       ],
     },

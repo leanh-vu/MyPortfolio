@@ -99,7 +99,7 @@
         {
           title: 'Skill',
           icon: 'mdi-clipboard-outline',
-          to: '/tables/regular-tables',
+          to: '/keyskills',
         },
         {
           title: 'workEx',

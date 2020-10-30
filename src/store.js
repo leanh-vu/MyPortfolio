@@ -23,34 +23,42 @@ export default new Vuex.Store({
       {
         skillName: 'Javascript',
         description: 'i can use js',
+        rating: 3,
       },
       {
         skillName: 'HTML',
         description: 'HTML',
+        rating: 3,
       },
       {
         skillName: 'CSS',
         description: 'CSS - Bootstrap - SCSS',
+        rating: 3,
       },
       {
         skillName: 'Vue.js',
         description: 'Vue.js - Vuex - Vue Router - Nuxt.js',
+        rating: 3,
       },
       {
         skillName: 'ReactJS',
         description: 'ReactJS',
+        rating: 3,
       },
       {
         skillName: 'Python',
         description: 'Python',
+        rating: 3,
       },
       {
         skillName: 'GIT',
         description: 'GIT, GIT flow',
+        rating: 4,
       },
       {
         skillName: 'Scrum',
         description: 'Scrum, Agile',
+        rating: 3,
       },
     ],
     workExperience: [

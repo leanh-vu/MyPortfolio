@@ -32,7 +32,7 @@
         width="300"
       >
         <v-card-text>
-          <strong class="mb-3 d-inline-block">SIDEBAR FILTERS</strong>
+          <strong class="mb-3 d-inline-block">SIDEBAR COLOR</strong>
 
           <v-item-group v-model="color">
             <v-item
@@ -73,13 +73,6 @@
               />
             </v-col>
           </v-row>
-
-          <v-divider class="my-4 secondary" />
-
-          <v-divider class="my-4 secondary" />
-
-          <div class="my-12" />
-
         </v-card-text>
       </v-card>
     </v-menu>
