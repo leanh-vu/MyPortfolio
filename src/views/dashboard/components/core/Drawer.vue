@@ -17,9 +17,7 @@
         v-bind="props"
       />
     </template>
-
     <v-divider class="mb-1" />
-
     <v-list
       dense
       nav
@@ -59,7 +57,6 @@
           :key="`group-${i}`"
           :item="item"
         >
-          <!--  -->
         </base-item-group>
 
         <base-item
@@ -97,23 +94,23 @@
           to: '/',
         },
         {
-          title: 'Skill',
-          icon: 'mdi-clipboard-outline',
+          title: 'Skills',
+          icon: 'mdi-arm-flex',
           to: '/Skills',
         },
         {
           title: 'workEx',
-          icon: 'mdi-format-font',
+          icon: 'mdi-briefcase',
           to: '/Workexperience',
         },
         {
           title: 'pProject',
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-bag-personal',
           to: '/PersonalProjects',
         },
         {
           title: 'education',
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-school',
           to: '/Education',
         },
       ],

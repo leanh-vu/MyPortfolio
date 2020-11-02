@@ -4,16 +4,11 @@
     fluid
     tag="section"
   >
-    <base-v-component
-      heading="Timelines"
-      link="components/timelines"
-    />
-
     <v-row>
       <v-col>
         <v-timeline align-top>
           <v-timeline-item
-            v-for="(timeline, i) in timelines"
+            v-for="(timeline, i) in schools"
             :key="i"
             :color="timeline.color"
             :icon="timeline.icon"
@@ -22,17 +17,21 @@
           >
             <v-card class="pa-6">
               <h2>
-                {{ timeline.chip }}
+                {{ timeline.schoolName }}
               </h2>
 
               <div
                 class="text-uppercase body-2"
                 v-text="timeline.subtext"
               />
-              <p
-                class="subtitle-1 font-weight-light"
-                v-text="timeline.text"
-              />
+              <ul>
+                <li
+                  v-for='(des, i) in timeline.description'
+                  :key='i'
+                >
+                  {{des}}
+                </li>
+              </ul>
 
               <template v-if="timeline.action">
               </template>
@@ -45,34 +44,16 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
   export default {
     name: 'DashboardPagesTimeline',
 
     data: () => ({
       menu: false,
-      timelines: [
-        {
-          chip: 'VNUHCM - University of Science',
-          color: 'info',
-          icon: 'mdi-briefcase',
-          text: '',
-          subtext: '',
-        },
-        {
-          chip: 'INTEK Institute of Applied Technology',
-          color: 'success',
-          icon: 'mdi-puzzle',
-          text: '',
-        },
-        {
-          chip: 'VNUHCM - University of Technology',
-          color: 'info',
-          icon: 'mdi-fingerprint',
-          text: '',
-          action: 'info',
-          actionIcon: 'mdi-wrench',
-        },
-      ],
+    }),
+    computed: mapState({
+      schools: 'education',
     }),
   }
 </script>

@@ -4,120 +4,128 @@
       :reverse="reverse"
       dense
     >
-      <v-timeline-item
-        v-for="(company, index) in workExperience"
-        :key="index"
-      >
-  <v-card>
-    <v-toolbar
-      flat
-      color="blue-grey"
-      dark
+    <v-timeline-item
+      v-for="(company, index) in workExperience"
+      :key="index"
     >
-      <v-toolbar-title>{{company.company}}</v-toolbar-title>
-    </v-toolbar>
-
-    <v-card-text>
-
-      <v-card
-        class="mx-auto my-12"
-        style="background-color: #F5F5F5"
+      <template v-slot:icon>
+        <v-avatar
+          size="62"
+          rounded
+        >
+          <v-img
+            v-if='company.company=="Teky Academy"'
+            :src="require('../../../assets/teky.jpg')"
+          />
+          <v-img
+            v-if='company.company=="I-ON Digital Corp"'
+            :src="require('../../../assets/ion.gif')"
+          />
+          <v-img
+            v-if='company.company=="Linkbynet Vietnam"'
+            :src="require('../../../assets/lbn.jpg')"
+          />
+        </v-avatar>
+      </template>
+    <v-card>
+      <v-toolbar
+        flat
+        color="blue-grey"
+        dark
       >
-        <v-card-title>Responsibility</v-card-title>
-        <v-card-text>
-          <div class="my-4 ">
-            <ul>
-              <li
-                v-for='(r, i) in company.responsibility'
-                :key='i'
+        <v-toolbar-title>{{company.company}}</v-toolbar-title>
+      </v-toolbar>
+      <v-card-text>
+        <v-card
+          class="mx-auto my-5"
+          style="background-color: #F5F5F5"
+        >
+          <v-card-title>Responsibility</v-card-title>
+          <v-card-text>
+            <div class="my-4 ">
+              <ul>
+                <li
+                  v-for='(r, i) in company.responsibility'
+                  :key='i'
+                >
+                  {{r}}
+                </li>
+              </ul>
+            </div>
+          </v-card-text>
+        </v-card>
+        <v-card
+          class="mx-auto my-5"
+          style="background-color: #F5F5F5"
+          v-if='isProjectShow(company.projects)'
+        >
+          <v-card-title>Projects</v-card-title>
+          <v-card-text>
+            <div class="my-4">
+
+            <v-expansion-panels inset>
+              <v-expansion-panel
+                v-for="(projects,i) in company.projects"
+                :key="i"
               >
-                {{r}}
-              </li>
-            </ul>
-          </div>
-        </v-card-text>
-      </v-card>
-
-      <v-card
-        class="mx-auto my-12"
-        style="background-color: #F5F5F5"
-        v-if='isProjectShow(company.projects)'
-      >
-        <v-card-title>Projects</v-card-title>
-        <v-card-text>
-          <div class="my-4">
-
-          <v-expansion-panels inset>
-            <v-expansion-panel
-              v-for="(projects,i) in company.projects"
-              :key="i"
-            >
-              <v-expansion-panel-header>
-                {{projects.projectName}}
-              </v-expansion-panel-header>
-              <v-expansion-panel-content>
-                {{projects.description}}
-            <div>
-              {{projects.time}}
+                <v-expansion-panel-header>
+                  {{projects.projectName}}
+                </v-expansion-panel-header>
+                <v-expansion-panel-content>
+                  {{projects.description}}
+              <div>
+                {{projects.time}}
+              </div>
+              <div>
+                {{projects.teamSize}}
+              </div>
+              <div>
+                {{projects.role}}
+              </div>
+              <div>
+                {{projects.responsibility}}
+              </div>
+              <div>
+                {{projects.technology}}
+              </div>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-expansion-panels>
             </div>
-            <div>
-              {{projects.teamSize}}
-            </div>
-            <div>
-              {{projects.role}}
-            </div>
-            <div>
-              {{projects.responsibility}}
-            </div>
-            <div>
-              {{projects.technology}}
-            </div>
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-          </v-expansion-panels>
-          </div>
-        </v-card-text>
-      </v-card>
+          </v-card-text>
+        </v-card>
 
-      <v-card
-        class="mx-auto my-12"
-        style="background-color: #F5F5F5"
-      >
-        <v-card-title>Skill set</v-card-title>
-        <v-card-text>
-          <div class="my-4 ">
-          <div class="my-4 ">
-            <ul>
-              <li
-                v-for='(r, i) in company.technicalSkillSet'
-                :key='i'
-              >{{r}}</li>
-            </ul>
-          </div>
-          </div>
-        </v-card-text>
-      </v-card>
-
-      <v-divider class="my-2"></v-divider>
-
-      <v-item-group multiple>
-      </v-item-group>
-    </v-card-text>
-
-    <v-divider></v-divider>
-  </v-card>
-      </v-timeline-item>
-    </v-timeline>
+        <v-card
+          class="mx-auto my-5"
+          style="background-color: #F5F5F5"
+        >
+          <v-card-title>Skill set</v-card-title>
+          <v-card-text>
+            <div>
+              <ul>
+                <li
+                  v-for='(r, i) in company.technicalSkillSet'
+                  :key='i'
+                >{{r}}</li>
+              </ul>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-card-text>
+    </v-card>
+    </v-timeline-item>
+  </v-timeline>
 </div>
 </template>
 
 <script>
   import { mapState } from 'vuex'
-
+  const path = require('path')
   export default {
     data () {
       return {
         reverse: false,
+        test: require(path.join('..', '..', '..', 'assets', 'teky.jpg')),
       }
     },
     computed: mapState(['workExperience']),

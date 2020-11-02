@@ -12,19 +12,15 @@
       elevation="1"
       fab
       small
-      @click="setDrawer(!drawer)"
+      @click="setDrawer(!drawer); isDrawerHide=!isDrawerHide"
     >
-      <v-icon v-if="value">
-        mdi-view-quilt
-      </v-icon>
-
-      <v-icon v-else>
-        mdi-dots-vertical
+      <v-icon>
+        {{hideDrawerButton}}
       </v-icon>
     </v-btn>
 
     <v-toolbar-title
-      class="hidden-sm-and-down font-weight-light"
+      class="hidden-sm-and-down"
       v-text="$route.name"
     />
 
@@ -54,7 +50,6 @@
             <template v-slot:badge>
               <span>1</span>
             </template>
-
             <v-icon>mdi-bell</v-icon>
           </v-badge>
         </v-btn>
@@ -113,22 +108,19 @@
       },
     },
 
-    props: {
-      value: {
-        type: Boolean,
-        default: false,
-      },
-    },
-
     data: () => ({
       notifications: [
         'Hello Sir/Madam,',
         'Welcome to my website',
       ],
+      isDrawerHide: false,
     }),
 
     computed: {
       ...mapState(['drawer']),
+      hideDrawerButton () {
+        return this.isDrawerHide ? 'mdi-arrow-right-thick' : 'mdi-arrow-left-thick'
+      },
     },
 
     methods: {

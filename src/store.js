@@ -66,6 +66,7 @@ export default new Vuex.Store({
         company: 'I-ON Digital Corp',
         time: '(09/2020 - now)',
         role: 'Front-end Web Developer',
+        image: '../../../assets/ion.jpg',
         responsibility: [
           'Maintain, improve existing project',
           'Apply new feature',
@@ -94,6 +95,7 @@ export default new Vuex.Store({
         company: 'Linkbynet Vietnam',
         time: '(10/2019 - 02/2020)',
         role: 'Front-end Web Developer Intern',
+        image: '../../../assets/lbn.jpg',
         responsibility: [
           'Design, build 2 web pages',
           'Maintain, develop existing web pages',
@@ -136,6 +138,7 @@ export default new Vuex.Store({
         company: 'Teky Academy',
         time: '(08/2020 - now)',
         role: 'Programing Teacher (part-time)',
+        image: '../../../assets/teky.jpg',
         responsibility: [
           'Design, build lessons plan',
           'Teaching, training',
@@ -206,6 +209,11 @@ export default new Vuex.Store({
         schoolName: 'VNUHCM - University of Science',
         degree: 'Bachelor degree',
         major: 'Information Technology',
+        description: [
+          'Online studying',
+        ],
+        color: 'blue',
+        subtext: '',
       },
       {
         schoolName: 'INTEK Institute',
@@ -216,6 +224,7 @@ export default new Vuex.Store({
           'Soft-skill lessons, workshops',
           'English class with native speaker',
         ],
+        color: 'red',
       },
     ],
   },
